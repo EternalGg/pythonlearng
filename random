@@ -1,0 +1,103 @@
+import numpy as np
+import tensorflow as tf
+import matplotlib.pyplot as plt
+#给定数组长度生成指定维度的数组0-1之间的浮点数
+# b=-1
+# for  a in range (9999999):
+#     sad = np.random.rand(1)
+#     if sad>b:
+#         b=sad
+#         print(b)
+#         print(a)
+
+
+# b=0
+# for a in range(999999999):
+#     hehe=np.random.randn()
+#     if hehe>b:
+#         b=hehe
+#         print(b)
+#         # print(a)
+
+x=np.array([2,1])
+y=np.array([5,3])
+print(x*y)
+
+# print(np.random.randint(1,20,size=10))
+# #[ 4  9  3 13 12  7 19  9 13  7]
+
+# print(np.random.random_integers(20,size=(3,1)))
+# #[[ 3 14  9 14  9]
+# # [17  6  1  4 18]
+# # [16 16  7  5 11]]
+
+# a=np.random.choice(5, 5,0.2,p=[0.1,0.1,0.6,0.1,0.1])
+# #[2 2 2 3 2]
+# print(a)
+
+# arr = np.arange(9).reshape((3, 3))
+# np.random.shuffle(arr)
+# print(arr)
+# # [[3 4 5]
+# #  [0 1 2]
+# #  [6 7 8]]
+
+# arr = np.arange(9).reshape((3, 3))
+# print(np.random.permutation(arr))
+# # array([[6, 7, 8],
+# #        [0, 1, 2],
+# #        [3, 4, 5]])
+# #随机排列一个序列，或返回一个排列的范围
+
+
+# mu, sigma = 1, 10
+# s=np.random.normal(mu,sigma,10)
+# count, bins, ignored = plt.hist(s, 30, normed=True)
+# plt.plot(bins, 1/(sigma * np.sqrt(2 * np.pi)) *
+#          np.exp( - (bins - mu)**2 / (2 * sigma**2) ),
+#          linewidth=2, color='r')
+# plt.show()
+# print(s.mean())
+# print(s)#高斯分布
+
+# a = tf.constant([3.0 ,4.0 ,0.1,100])
+# with tf.Session() as sess:
+#     b = tf.nn.relu(a)#relu将负数变成0
+#     print(sess.run(b))
+# Weights = tf.Variable(tf.random_normal([1, 10]))
+# x_data = np.linspace(-1,1,300)[:, np.newaxis]
+#
+#
+# init = tf.global_variables_initializer()
+# sess = tf.Session()
+# sess.run(init)
+# Wx_plus_b = tf.matmul(x_data,Weights)
+# print(Wx_plus_b)
+
+
+
+# x = tf.constant([[2, 2], [3, 3]])
+# y = tf.constant([[8, 16], [2, 3]])
+# # tf.pow(x, y)  # [[256, 65536], [9, 27]]
+# sess=tf.Session()
+# print(sess.run(tf.pow(x,y)))
+
+# a=tf.constant([2,2],shape=(1,2),name="a")#"a:0", shape=(2,), dtype=int32
+# b=tf.constant([[0,1],[2,3]],name="b")#"b:0", shape=(2, 2), dtype=int32]
+# x=tf.add(a,b)
+# y=tf.matmul(a,b)
+# with tf.Session() as sess:
+#    x,y=sess.run([x,y])
+#    print(x,y)
+#    # print(y)
+
+# a=tf.random_gamma([10],[1,2])
+# x = np.linspace(1, 10, 50)
+# y = 2*x + 1
+# with tf.Session() as sess:
+#     print(sess.run(a))
+# # plt.figure()
+# # plt.plot(x,y)
+# # # plt.plot(x, y1, color='red', linewidth=1.0, linestyle='--')
+# # plt.plot(x,a, color='red', linewidth=1.0, linestyle='--')
+# # plt.show()
